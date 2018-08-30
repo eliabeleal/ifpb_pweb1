@@ -78,3 +78,20 @@ As Aspas simple e dupla têm comportamentos diferentes. A dupla é sempre interp
 #### Concatenação
 Sempre com *.*
 
+#### Chaves e conteúdos
+PHP não é como C que cria indices sequenciais, as chaves podem ser atribuidas dinamicamentes. Quando as chaves não são informadas o interpretador gera automaticamente. Um problema de não indicar que a variável é um array ela se torna uma variável simples.
+
+#### Conversão Automática de tipo
+\+ não é um operador sobrecarregado como é em JAVA. Logo,
+```php
+  <?php
+    1 + "2" //3
+  ?>
+```
+Se as aspas simples for usada é interpretado também
+
+#### Tipo MIXED
+Corresponde com qualquer tipo. Tanto para retorno quanto para parâmentros de função.
+
+#### Constantes
+É referenciada sem o _$_
