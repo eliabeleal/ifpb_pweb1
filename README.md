@@ -1,5 +1,5 @@
-# ifpb_pweb1
 # PROGRAMAÇÃO PARA WEB
+## AULA 1
 
 Modelo distribuido, o servidor processa um script e devolve (reponse) uma estrutura.
 Servidor processa os dados e devolve uma página.
@@ -30,5 +30,51 @@ Laravel Framework
 WAMP = PHP + MySQL + Servidor Apache + Windows
 PHP é uma linguagem interpretada
 COMPOSER
-# ifpb_pweb1
+
+## AULA 2
+
+### Introdução
+PHP: Personal Home Page Tools  
+PHP pode gerar como resposta vários documentos: HTML, JSON, XML e outros  
+É uma liguagem de criação script  
+PHP tem como base C, depois de ser PERL  
+Existe uma comunidade que se preocupa com os padrões  
+Existe uma API unica que se comunica com qualquer SGBD  
+
+### Sintaxa Básica
+#### Delimitador de bloco
+```php
+<?php
+  //comandos
+?>
+```
+A extensão do arquivo tem que ser **.php** para ser executado dentro do bloco  
+O Apache é usado para ler os arquivos PHP. Usado por default em arquivos estáticos  
+http://<ip>:<porta>/script.php
+A porta é o local onde o Apache estará rodando
+  
+Conteúdo estático não tem preprocessamento, por isso se caso for solicitado um arquivo .html o Apache retornará, se houver, uma estrutura .html com aquele mesmo nome.  
+Outra forma de rescrita do código php  
+```php
+<?php
+  echo '<html>'
+  echo '<body>'
+  echo 'Olá mundo'
+  echo '</body>'
+  echo '</html>'
+?>
+```
+Dessa forma o Apache irá processar o script, da primeira forma o apache apenas envia as tag sem precisar de processar.  
+
+#### Tipo de dados
+Não é uma linguagem fortemente tipo. Apartir 5-7 é possível criar tipo de parâmentros
+O NULL é um tipo  
+O resource é um ponteiro, mas não explicito como é em C
+
+#### Variáveis
+Começa com _$_
+As Aspas simple e dupla têm comportamentos diferentes. A dupla é sempre interpretada, já a simples não. Esta é entregue da forma que estar.
+
+#### Concatenação
+Sempre com *.*
 
