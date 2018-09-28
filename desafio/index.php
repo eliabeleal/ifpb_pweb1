@@ -18,8 +18,8 @@
         $conta = new ContaCorrente('1246', $cliente);
         $conta->depositar(435.65);
         $conta->sacar(10.00);
-        print_r($conta->getsaldo());
-        //print_r($conta);
+        //print_r($conta->getsaldo());
+        print_r($conta);
     ?>
 </body>
 </html>
