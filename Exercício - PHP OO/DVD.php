@@ -16,9 +16,11 @@
                 throw new InformacaoNulaException('o parametro ano esta nulo');
             }
 
-            $this->titulo = $titulo;
+            //$this->titulo = $titulo;
             $this->ano = new DateTime($ano);
-            parent::__construct($codigo, $preco);
+            parent::__construct($titulo, $codigo, $preco);
+
+            $this->log('Sua classe ('.__CLASS__.') foi criada<br>');
         }
     }
     

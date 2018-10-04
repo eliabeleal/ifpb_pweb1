@@ -9,7 +9,7 @@
         private $volume;
         private $dataValidade;
 
-        function __construct($marca = NULL, $volume = NULL, $dataValidade = NULL, $codigo = NULL, $preco = NULL)
+        function __construct($marca, $volume, $dataValidade, $codigo, $preco)
         {
             if ($marca == NULL) 
             {
@@ -24,11 +24,13 @@
                 throw new InformacaoNulaException('o parametro data de validade está nulo');
             }
             
-            parent::__construct($codigo, $preco);
+            parent::__construct($marca, $codigo, $preco);
 
-            $this->marca = $marca;
+            //$this->marca = $marca;
             $this->volume = $volume;
             $this->dataValidade = new DateTime($dataValidade);
+
+            $this->log('Sua classe ('.__CLASS__.') foi criada<br>');
         }
 
         function estaVencido(): bool
@@ -40,6 +42,15 @@
                 return True;
         }
 
+        public function getVolume()
+        {
+                return $this->volume;
+        }
+        public function setVolume($volume)
+        {
+                $this->volume = $volume;
+                return $this;
+        }
     }
     
 ?>
