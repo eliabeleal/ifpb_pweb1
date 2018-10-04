@@ -17,10 +17,20 @@
             }
 
             //$this->titulo = $titulo;
-            $this->ano = new DateTime($ano);
+            $this->ano = $ano;
             parent::__construct($titulo, $codigo, $preco);
 
             $this->log('Sua classe ('.__CLASS__.') foi criada<br>');
+        }
+
+        public function getAno()
+        {
+                return $this->ano;
+        }
+        public function setAno($ano)
+        {
+                $this->ano = $ano;
+                return $this;
         }
     }
     
