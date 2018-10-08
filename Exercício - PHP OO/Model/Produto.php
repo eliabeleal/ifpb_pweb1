@@ -1,6 +1,4 @@
 <?php
-    require_once('Nomeavel.php');
-    require_once('Logger.php');
     abstract class Produto 
     {
         use Nomeavel;

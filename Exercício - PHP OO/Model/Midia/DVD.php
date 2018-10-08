@@ -1,5 +1,4 @@
 <?php
-    require_once('Produto.php');
     class DVD extends Produto 
     {
         private $titulo;
