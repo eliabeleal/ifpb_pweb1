@@ -1,8 +1,9 @@
 <?php
+namespace Model;
+use Excecao\InformacaoNulaException;
     abstract class Produto 
     {
-        use Nomeavel;
-        use Logger;
+        use \Traits\Nomeavel, \Traits\Logger;
 
         private $codigo;
         private $preco;

@@ -1,4 +1,6 @@
 <?php
+namespace Model\Midia;
+use \Model\Produto;
     class DVD extends Produto 
     {
         private $titulo;

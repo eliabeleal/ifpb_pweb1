@@ -1,4 +1,6 @@
 <?php
+namespace Model\Laticinio;
+use Model\Produto, Model\Perecivel;
 //https://www.devmedia.com.br/manipulando-datas-com-php/32966
     class Leite extends Produto implements Perecivel
     {
@@ -25,14 +27,14 @@
 
             //$this->marca = $marca;
             $this->volume = $volume;
-            $this->dataValidade = new DateTime($dataValidade);
+            $this->dataValidade = new \DateTime($dataValidade);
 
             $this->log('Sua classe ('.__CLASS__.') foi criada<br>');
         }
 
         function estaVencido(): bool
         {
-            $atual = new DateTime();
+            $atual = new \DateTime();
             if ($atual < $this->dataValidade)
                 return False;
             else
